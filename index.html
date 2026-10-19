@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Our Little Pond — a romantic storybook website created for Hagar."
+    />
+    <meta name="theme-color" content="#FFF8F0" />
+    <title>Our Little Pond</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Our Little Pond" />
+    <meta property="og:description" content="A little storybook for Hagar." />
+    <meta property="og:image" content="./assets/preview.svg" />
+    <meta property="og:image:alt" content="Two illustrated ducks floating together in Our Little Pond." />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to the story</a>
+    <div class="page-shell">
+      <header class="topbar" aria-label="Main site header">
+        <div class="brand-mark">Our Little Pond</div>
+        <nav class="site-nav" aria-label="Page sections">
+          <a href="#story-section">Story</a>
+          <a href="#memory-gallery-title">Memories</a>
+          <a href="#reasons-title">Reasons</a>
+          <a href="#wish-section">Wishes</a>
+          <a href="#message-section">A note</a>
+          <a href="#game-title">Game</a>
+          <a href="#final-letter-title">Letter</a>
+        </nav>
+        <div class="music-control">
+          <button
+            id="audio-toggle"
+            class="audio-toggle secondary-button"
+            type="button"
+            aria-label="Play romantic piano music"
+            aria-pressed="false"
+            aria-controls="pond-music"
+          >
+            Play romantic piano
+          </button>
+          <a
+            class="music-credit"
+            href="https://commons.wikimedia.org/wiki/File:Chopin_Nocturne_No._2_in_E_Flat_Major,_Op._9.ogg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Chopin · Nocturne No. 2
+          </a>
+        </div>
+      </header>
+
+      <audio id="pond-music" loop preload="none">
+        <source src="./assets/chopin-nocturne-op9-no2.ogg" type="audio/ogg; codecs=vorbis" />
+      </audio>
+
+      <main id="main-content">
+        <section class="opening" aria-labelledby="opening-title">
+          <div class="pond-scene">
+            <svg viewBox="0 0 760 620" aria-hidden="true">
+              <defs>
+                <linearGradient id="pondGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+                  <stop offset="0%" stop-color="#A8D5D2" />
+                  <stop offset="100%" stop-color="#AFC8A7" />
+                </linearGradient>
+                <radialGradient id="sunGlow">
+                  <stop offset="0%" stop-color="#FFFDF9" stop-opacity="0.9" />
+                  <stop offset="100%" stop-color="#F4D98B" stop-opacity="0.05" />
+                </radialGradient>
+              </defs>
+
+              <circle class="sun-halo" cx="650" cy="115" r="88" fill="url(#sunGlow)" />
+              <circle class="sun-disc" cx="650" cy="115" r="36" fill="#F4D98B" opacity="0.72" />
+
+              <circle class="cloud cloud-one" cx="140" cy="110" r="34" />
+              <circle class="cloud cloud-one" cx="178" cy="95" r="28" />
+              <circle class="cloud cloud-one" cx="208" cy="108" r="30" />
+
+              <circle class="cloud cloud-two" cx="560" cy="135" r="28" />
+              <circle class="cloud cloud-two" cx="595" cy="120" r="22" />
+              <circle class="cloud cloud-two" cx="622" cy="138" r="26" />
+
+              <ellipse cx="380" cy="470" rx="330" ry="120" fill="url(#pondGradient)" opacity="0.95" />
+              <ellipse cx="380" cy="425" rx="260" ry="88" fill="#9BC1BA" opacity="0.5" />
+              <g class="pond-ripples" fill="none" stroke="#FFF8F0" stroke-linecap="round" aria-hidden="true">
+                <ellipse cx="380" cy="440" rx="46" ry="12" stroke-width="2" />
+                <ellipse cx="380" cy="440" rx="74" ry="19" stroke-width="1.5" />
+                <ellipse cx="380" cy="440" rx="105" ry="27" stroke-width="1" />
+              </g>
+              <path d="M80 475 C190 448 275 488 380 462 S580 448 682 477" fill="none" stroke="#FFF8F0" stroke-width="3" stroke-linecap="round" opacity="0.65" />
+              <path d="M145 505 C220 487 275 513 348 499 M425 500 C500 481 560 498 620 485" fill="none" stroke="#FFF8F0" stroke-width="2" stroke-linecap="round" opacity="0.45" />
+
+              <g class="pond-fireflies" aria-hidden="true">
+                <circle class="firefly firefly-one" cx="102" cy="220" r="4" />
+                <circle class="firefly firefly-two" cx="284" cy="165" r="3" />
+                <circle class="firefly firefly-three" cx="510" cy="204" r="4" />
+                <circle class="firefly firefly-four" cx="590" cy="245" r="2.5" />
+                <path class="dragonfly-trail" d="M149 255c28-46 72-57 115-36s62 13 89-20" />
+              </g>
+
+              <g class="pond-reeds pond-reeds-left" fill="none" stroke="#668A70" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M74 451c-9-81-5-161 18-231m-14 166c-20-39-37-60-56-74m61 40c20-35 40-53 60-65m-64 6c-7-31-17-54-31-72" stroke-width="7" />
+                <path d="M39 351c-4-31-17-51-31-66m102 35c15-22 32-35 49-41m-89-18c-5-25-14-43-27-57" stroke-width="4" />
+                <path d="M82 251c1-12 11-21 20-24 2 14-4 23-20 24m37 31c12-10 25-10 35-6-7 13-20 16-35 6m-62-28c-13-9-26-9-36-4 7 13 20 15 36 4" stroke-width="3" />
+                <path d="M90 228v-19m-4 0h8m-4-5v24" stroke-width="6" />
+              </g>
+              <g class="pond-reeds pond-reeds-right" fill="none" stroke="#668A70" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M685 448c13-71 10-147-11-219m8 161c19-39 36-59 54-74m-59 42c-21-34-40-52-60-64m64 3c7-29 17-52 31-69" stroke-width="7" />
+                <path d="M720 350c5-29 17-49 31-64m-102 33c-15-21-31-34-48-40m87-18c5-23 14-41 27-55" stroke-width="4" />
+                <path d="M672 228c-1-12-11-21-20-24-2 14 4 23 20 24m-37 29c-12-10-25-10-35-6 7 13 20 16 35 6m62-27c13-9 26-9 36-4-7 13-20 15-36 4" stroke-width="3" />
+                <path d="M664 225v-18m-4 0h8m-4-5v23" stroke-width="6" />
+              </g>
+
+              <g class="pond-sparkles" fill="#FFFDF9" aria-hidden="true">
+                <path d="M344 271l5 12 12 5-12 5-5 12-5-12-12-5 12-5z" />
+                <path d="M443 224l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" />
+                <path d="M112 286l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" />
+                <circle cx="493" cy="272" r="3" />
+                <circle cx="286" cy="240" r="2.5" />
+              </g>
+
+              <g class="lily lily-left">
+                <ellipse cx="230" cy="405" rx="38" ry="20" fill="#AFC8A7" opacity="0.8" />
+                <path d="M230 402c-20-18-29-1 0 8 29-9 20-26 0-8Z" fill="#F4C8B8" />
+                <path d="M230 402c-5-25 14-24 7 0 24-11 32 5 6 9 5 23-14 26-13 1-19 18-31 4-7-6-27-4-23-23 7-4Z" fill="#FFF8F0" stroke="#D98C9A" stroke-width="2" />
+                <circle cx="230" cy="404" r="5" fill="#F4D98B" />
+              </g>
+
+              <g class="lily lily-right">
+                <ellipse cx="530" cy="405" rx="38" ry="20" fill="#AFC8A7" opacity="0.8" />
+                <path d="M530 402c-20-18-29-1 0 8 29-9 20-26 0-8Z" fill="#F4C8B8" />
+                <path d="M530 402c-5-25 14-24 7 0 24-11 32 5 6 9 5 23-14 26-13 1-19 18-31 4-7-6-27-4-23-23 7-4Z" fill="#FFF8F0" stroke="#D98C9A" stroke-width="2" />
+                <circle cx="530" cy="404" r="5" fill="#F4D98B" />
+              </g>
+
+              <g class="duck duck-left">
+                <g transform="translate(480 0) scale(-1 1)">
+                  <ellipse cx="240" cy="330" rx="62" ry="42" fill="#F4D98B" />
+                  <ellipse cx="188" cy="328" rx="32" ry="27" fill="#F4D98B" />
+                  <circle cx="182" cy="322" r="8" fill="#493B37" />
+                  <circle cx="167" cy="315" r="3" fill="#FFF8F0" />
+                  <path d="M170 312 Q155 300 146 318" fill="#D98C9A" stroke="#493B37" stroke-width="3" stroke-linejoin="round" />
+                  <path d="M230 298 Q246 282 266 295" fill="none" stroke="#D98C9A" stroke-width="5" stroke-linecap="round" />
+                  <path d="M235 350 Q218 370 224 392" fill="none" stroke="#493B37" stroke-width="4" stroke-linecap="round" />
+                  <path d="M274 352 Q290 370 288 392" fill="none" stroke="#493B37" stroke-width="4" stroke-linecap="round" />
+                  <ellipse cx="285" cy="319" rx="12" ry="18" fill="#F4C8B8" />
+                </g>
+              </g>
+
+              <g class="duck duck-right">
+                <g transform="translate(1080 0) scale(-1 1)">
+                  <ellipse cx="540" cy="312" rx="62" ry="42" fill="#F4C8B8" />
+                  <ellipse cx="592" cy="308" rx="32" ry="27" fill="#F4C8B8" />
+                  <circle cx="598" cy="307" r="8" fill="#493B37" />
+                  <circle cx="610" cy="298" r="3" fill="#FFF8F0" />
+                  <path d="M598 295 Q615 285 624 302" fill="#D98C9A" stroke="#493B37" stroke-width="3" stroke-linejoin="round" />
+                  <path d="M550 284 Q532 268 514 281" fill="none" stroke="#D98C9A" stroke-width="5" stroke-linecap="round" />
+                  <path d="M546 336 Q527 352 534 380" fill="none" stroke="#493B37" stroke-width="4" stroke-linecap="round" />
+                  <path d="M595 340 Q612 360 610 388" fill="none" stroke="#493B37" stroke-width="4" stroke-linecap="round" />
+                  <ellipse cx="500" cy="308" rx="12" ry="18" fill="#D98C9A" />
+                </g>
+              </g>
+
+              <g class="floaty-love" aria-hidden="true">
+                <path d="M360 160 C350 142 330 140 320 156 C310 140 290 142 284 160 C278 176 290 189 306 202 C322 214 338 223 360 238 C382 223 398 214 414 202 C430 189 442 176 436 160 C430 142 410 140 400 156 C390 140 370 142 360 160 Z" fill="#D98C9A" opacity="0.7" />
+              </g>
+            </svg>
+            <img
+              class="dragonfly-art"
+              src="./assets/art-nouveau-dragonfly.svg"
+              alt=""
+              aria-hidden="true"
+              fetchpriority="high"
+            />
+            <span class="pond-label pond-label--sky" aria-hidden="true">a little place to bloom</span>
+            <button
+              id="duck-whisper"
+              class="duck-whisper"
+              type="button"
+              aria-label="Ask the pink duck for a secret"
+              title="Ask the pink duck for a secret"
+            ></button>
+          </div>
+
+          <div class="opening-copy">
+            <p class="eyebrow">A love story for Hagar</p>
+            <h1 id="opening-title">Hello, Hagar.</h1>
+            <p class="intro-text">
+              Welcome to our little pond — a place where the quiet moments, the laughs,
+              and the sweetest details become a story worth keeping.
+            </p>
+
+            <figure class="opening-memory">
+              <img
+                src="./assets/5958472297012203554_121.jpg"
+                alt="Two people sitting close together for a selfie."
+                fetchpriority="high"
+              />
+              <figcaption>My favorite view: you, right here beside me.</figcaption>
+            </figure>
+
+            <div class="opening-actions">
+              <button id="begin-story" class="primary-button" type="button">
+                Begin our story
+              </button>
+              <button id="duck-surprise" class="secondary-button" type="button">
+                A tiny duck secret
+              </button>
+            </div>
+
+            <p id="story-cta" class="story-cta" aria-live="polite">
+              Every chapter is waiting in the reeds. The pink duck has a secret, too.
+            </p>
+          </div>
+        </section>
+
+        <section class="story-preview" aria-labelledby="story-preview-title">
+          <div class="section-heading">
+            <p class="eyebrow">A gentle preview</p>
+            <h2 id="story-preview-title">The first page is already smiling.</h2>
+          </div>
+
+          <article class="preview-card" aria-live="polite">
+            <p class="preview-label">Our first chapter</p>
+            <h3 id="preview-title">Loading chapter...</h3>
+            <p id="preview-blurb">
+              The story is being prepared with care, just like the moments that remind me
+              how lucky I am to know you.
+            </p>
+          </article>
+        </section>
+
+        <section id="story-section" class="story-section" aria-labelledby="story-chapter-title">
+          <div class="section-heading">
+            <p class="eyebrow">Our story</p>
+            <h2>One chapter at a time.</h2>
+          </div>
+
+          <article
+            class="story-panel"
+            tabindex="0"
+            role="group"
+            aria-label="Interactive story chapter"
+            aria-describedby="story-keyboard-help"
+          >
+            <div id="story-illustration" class="story-illustration" data-accent="rose" aria-hidden="true">
+              <svg viewBox="0 0 520 390" focusable="false">
+                <defs>
+                  <linearGradient id="chapter-water" x1="0" x2="1" y1="0" y2="1">
+                    <stop offset="0" stop-color="#B6DEDA" />
+                    <stop offset="1" stop-color="#86B9AC" />
+                  </linearGradient>
+                  <linearGradient id="chapter-duck-gold" x1="0" x2="1" y1="0" y2="1">
+                    <stop offset="0" stop-color="#FFE9A5" />
+                    <stop offset="1" stop-color="#E9BC62" />
+                  </linearGradient>
+                  <linearGradient id="chapter-duck-rose" x1="0" x2="1" y1="0" y2="1">
+                    <stop offset="0" stop-color="#F7D2C7" />
+                    <stop offset="1" stop-color="#D98998" />
+                  </linearGradient>
+                  <filter id="chapter-shadow" x="-30%" y="-30%" width="160%" height="170%">
+                    <feDropShadow dx="0" dy="7" stdDeviation="7" flood-color="#493B37" flood-opacity="0.14" />
+                  </filter>
+                </defs>
+                <circle cx="414" cy="82" r="49" fill="#F4D98B" opacity="0.78" />
+                <circle cx="414" cy="82" r="68" fill="#FFF8F0" opacity="0.28" />
+                <path d="M0 206C66 160 126 175 185 202s100 17 155-5 112-25 180 14v179H0z" fill="#B7CFA9" opacity="0.67" />
+                <path d="M0 236c69-44 133-33 201-5 65 27 116 8 177-14 56-21 95-14 142 5v168H0z" fill="#D6E3C8" />
+                <ellipse cx="260" cy="303" rx="236" ry="90" fill="url(#chapter-water)" />
+                <path d="M48 299c51-20 95-14 143 0m155 7c42-15 77-13 123 2M112 338c38-12 68-10 101 1m96-7c26-9 52-7 79 2" fill="none" stroke="#F8FFF4" stroke-width="4" stroke-linecap="round" opacity="0.58" />
+                <g fill="none" stroke="#789A75" stroke-width="7" stroke-linecap="round">
+                  <path d="M50 258q-4-61 10-102m-8 78q-32-36-41-66m42 49q24-32 37-61" />
+                  <path d="M470 264q4-58-10-94m8 73q31-37 42-67m-43 48q-25-31-38-61" />
+                </g>
+                <g fill="#F4C8B8">
+                  <circle cx="20" cy="166" r="7" /><circle cx="91" cy="168" r="7" />
+                  <circle cx="438" cy="168" r="7" /><circle cx="500" cy="168" r="7" />
+                </g>
+                <g filter="url(#chapter-shadow)">
+                  <g transform="translate(0 6)">
+                    <ellipse cx="193" cy="253" rx="67" ry="43" fill="url(#chapter-duck-gold)" />
+                    <path d="M142 253q-29-11-38 7 24 13 50 5" fill="#E6B85F" />
+                    <circle cx="235" cy="224" r="31" fill="url(#chapter-duck-gold)" />
+                    <path d="M260 226q25 1 30 12-17 12-33 0" fill="#D98C9A" />
+                    <ellipse cx="194" cy="256" rx="31" ry="19" fill="#FFF4D2" opacity="0.7" />
+                    <circle cx="244" cy="219" r="4.5" fill="#493B37" />
+                    <circle cx="245" cy="218" r="1.5" fill="#FFF8F0" />
+                  </g>
+                  <g transform="translate(520 0) scale(-1 1)">
+                    <ellipse cx="310" cy="269" rx="62" ry="39" fill="url(#chapter-duck-rose)" />
+                    <path d="M262 268q-27-11-36 7 23 12 47 5" fill="#D98998" />
+                    <circle cx="350" cy="242" r="29" fill="url(#chapter-duck-rose)" />
+                    <path d="M373 244q23 1 28 11-16 11-31 0" fill="#C87583" />
+                    <ellipse cx="310" cy="271" rx="29" ry="17" fill="#FFF5EF" opacity="0.7" />
+                    <circle cx="358" cy="237" r="4.5" fill="#493B37" />
+                    <circle cx="359" cy="236" r="1.5" fill="#FFF8F0" />
+                  </g>
+                </g>
+                <g fill="#AFC8A7">
+                  <path d="M87 316a30 17 0 0 0 51 0q-23 13-51 0z" />
+                  <path d="M378 325a32 18 0 0 0 54 0q-26 14-54 0z" />
+                </g>
+                <g fill="#FFF8F0" stroke="#D98C9A" stroke-width="2">
+                  <circle cx="118" cy="311" r="7" /><circle cx="111" cy="316" r="6" /><circle cx="125" cy="316" r="6" />
+                  <circle cx="407" cy="320" r="7" /><circle cx="400" cy="325" r="6" /><circle cx="414" cy="325" r="6" />
+                </g>
+                <g class="chapter-motif chapter-motif--one" fill="#D98C9A">
+                  <path d="M265 112c-13-17-34 2 0 27 34-25 13-44 0-27z" />
+                  <path d="M260 146l5 11 11 5-11 5-5 11-5-11-11-5 11-5z" fill="#FFF8F0" />
+                </g>
+                <g class="chapter-motif chapter-motif--two" fill="none" stroke="#FFF8F0" stroke-width="4">
+                  <circle cx="252" cy="128" r="15" /><circle cx="292" cy="105" r="8" /><circle cx="224" cy="100" r="6" />
+                  <path d="m286 145 4 8 9 1-7 6 2 9-8-5-8 5 2-9-7-6 9-1z" fill="#F4D98B" stroke="none" />
+                </g>
+                <g class="chapter-motif chapter-motif--three" fill="#F4C8B8" stroke="#FFF8F0" stroke-width="2">
+                  <path d="M251 119q-22-27-34-2 17 12 34 2m0 0q22-27 34-2-17 12-34 2m0 0v17" />
+                  <circle cx="214" cy="149" r="4" /><circle cx="298" cy="141" r="4" />
+                </g>
+                <g class="chapter-motif chapter-motif--four">
+                  <path d="M271 88a27 27 0 1 0 27 39 22 22 0 0 1-27-39z" fill="#FFF4D2" />
+                  <path d="m318 117 4 9 10 1-8 6 3 10-9-6-8 6 3-10-8-6 10-1z" fill="#FFF8F0" />
+                </g>
+                <g class="chapter-motif chapter-motif--five">
+                  <path d="M229 104h66v45h-66z" fill="#FFF8F0" stroke="#D98C9A" stroke-width="4" />
+                  <path d="m231 108 31 26 31-26" fill="none" stroke="#D98C9A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="m312 105 4 8 9 1-7 6 2 9-8-5-8 5 2-9-7-6 9-1z" fill="#F4D98B" />
+                </g>
+                <g class="chapter-motif chapter-motif--six">
+                  <path d="M222 111q20-12 40 0v39q-20-12-40 0zm40 0q20-12 40 0v39q-20-12-40 0z" fill="#FFF8F0" stroke="#D98C9A" stroke-width="4" stroke-linejoin="round" />
+                  <path d="M262 113v36m-29-25 18 5m22-5 18-5" stroke="#E7BE74" stroke-width="3" stroke-linecap="round" />
+                </g>
+              </svg>
+            </div>
+
+            <div class="story-copy">
+              <div class="story-meta">
+                <span id="chapter-number">Chapter 1</span>
+                <span class="meta-divider">•</span>
+                <span id="chapter-progress">1 of 6</span>
+              </div>
+
+              <h3 id="story-chapter-title">The Girl in My Story</h3>
+              <div id="story-body" class="story-body" aria-live="polite" aria-atomic="true"></div>
+              <p id="story-note" class="story-note"></p>
+              <div
+                id="chapter-photo-strip"
+                class="chapter-photo-strip"
+                role="group"
+                aria-label="Photos for this story chapter"
+              ></div>
+
+              <div class="story-controls">
+                <button id="prev-chapter" class="secondary-button story-button" type="button">
+                  Previous
+                </button>
+                <div class="chapter-progress" aria-live="polite">
+                  <span id="chapter-progress-label">1 of 6</span>
+                </div>
+                <button id="next-chapter" class="primary-button story-button" type="button">
+                  Next chapter
+                </button>
+              </div>
+              <p id="story-keyboard-help" class="story-keyboard-help">
+                For keyboard reading, focus this story panel and use the left and right arrow keys.
+              </p>
+              <p id="story-completion" class="story-completion" hidden>
+                You reached the last page. The next chapter is ours to write.
+              </p>
+            </div>
+          </article>
+        </section>
+
+        <section class="memory-gallery-section" aria-labelledby="memory-gallery-title">
+          <div class="section-heading">
+            <p class="eyebrow">Our memories</p>
+            <h2 id="memory-gallery-title">A little album of my favorite you.</h2>
+            <p class="section-intro">
+              Eighteen little windows into us, with a few blank pages saved for whatever comes next.
+            </p>
+            <p id="gallery-count" class="gallery-count" aria-live="polite"></p>
+            <blockquote class="album-note">
+              <span aria-hidden="true">“</span>
+              I don’t need every moment to be perfect. My favorite frames are the ones with you in them.
+            </blockquote>
+          </div>
+
+          <div class="memory-gallery" id="memory-gallery"></div>
+        </section>
+
+        <svg class="art-library" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+          <symbol id="art-heart" viewBox="0 0 64 64">
+            <path d="M32 53S8 39 8 23a12 12 0 0 1 22-6l2 3 2-3a12 12 0 0 1 22 6c0 16-24 30-24 30Z" />
+            <path d="m20 31 7 7 16-17" />
+          </symbol>
+          <symbol id="art-sun" viewBox="0 0 64 64">
+            <circle cx="32" cy="32" r="12" />
+            <path d="M32 5v9m0 36v9M5 32h9m36 0h9M13 13l7 7m24 24 7 7m0-38-7 7m-24 24-7 7" />
+          </symbol>
+          <symbol id="art-water" viewBox="0 0 64 64">
+            <path d="M8 25c8-8 16 8 24 0s16 8 24 0M8 38c8-8 16 8 24 0s16 8 24 0M14 50c6-6 12 6 18 0s12 6 18 0" />
+            <path d="M32 7c-6 8-9 12-9 17a9 9 0 0 0 18 0c0-5-3-9-9-17Z" />
+          </symbol>
+          <symbol id="art-flower" viewBox="0 0 64 64">
+            <path d="M32 34v23m0-9q-13-12-21-2 10 12 21 5m0-2q13-12 21-2-10 12-21 5" />
+            <circle cx="32" cy="22" r="7" /><circle cx="32" cy="10" r="6" /><circle cx="44" cy="22" r="6" /><circle cx="32" cy="34" r="6" /><circle cx="20" cy="22" r="6" />
+          </symbol>
+          <symbol id="art-ducks" viewBox="0 0 64 64">
+            <path d="M8 46h48M13 43c3-11 11-17 21-17s18 6 21 17M19 26a8 8 0 1 1 16 0m8 2a7 7 0 1 1 14 0m-23-6 7 3-7 3m10-2 6 3-6 3" />
+            <path d="M12 52q8-4 16 0t16 0 12 0" />
+          </symbol>
+          <symbol id="art-details" viewBox="0 0 64 64">
+            <circle cx="27" cy="27" r="16" />
+            <path d="m39 39 15 15M21 27h12m-6-6v12" />
+            <path d="m13 12 2 4 4 2-4 2-2 4-2-4-4-2 4-2zm36-3 2 4 4 2-4 2-2 4-2-4-4-2 4-2z" />
+          </symbol>
+          <symbol id="art-leaf" viewBox="0 0 64 64">
+            <path d="M53 10C29 10 12 18 12 38c0 10 7 16 16 16 20 0 25-23 25-44Z" />
+            <path d="M11 56c8-14 17-24 34-35M26 41l-1-12m9 5 11 1" />
+          </symbol>
+          <symbol id="art-eye" viewBox="0 0 64 64">
+            <path d="M5 32s10-17 27-17 27 17 27 17-10 17-27 17S5 32 5 32Z" />
+            <circle cx="32" cy="32" r="9" /><circle cx="32" cy="32" r="3" />
+          </symbol>
+          <symbol id="art-moon" viewBox="0 0 64 64">
+            <path d="M47 43A23 23 0 0 1 21 9a23 23 0 1 0 26 34Z" />
+            <path d="m45 9 2 5 5 2-5 2-2 5-2-5-5-2 5-2zm-7 28 2 4 4 2-4 2-2 4-2-4-4-2 4-2z" />
+          </symbol>
+          <symbol id="art-mug" viewBox="0 0 64 64">
+            <path d="M12 21h34v27a8 8 0 0 1-8 8H20a8 8 0 0 1-8-8zm34 6h5a7 7 0 0 1 0 14h-5M20 10c-4 4 4 5 0 9m12-9c-4 4 4 5 0 9" />
+            <path d="M18 34h21" />
+          </symbol>
+          <symbol id="art-compass" viewBox="0 0 64 64">
+            <circle cx="32" cy="32" r="24" />
+            <path d="m41 23-6 15-15 6 6-15z" />
+            <path d="M32 3v7m0 44v7M3 32h7m44 0h7" />
+          </symbol>
+          <symbol id="art-book" viewBox="0 0 64 64">
+            <path d="M8 13q13-4 24 4v38q-11-8-24-4zm48 0q-13-4-24 4v38q11-8 24-4z" />
+            <path d="M15 24q7-1 12 2m-12 6q7-1 12 2m22-10q-7-1-12 2m12 6q-7-1-12 2" />
+            <path d="m32 4 2 5 5 2-5 2-2 5-2-5-5-2 5-2z" />
+          </symbol>
+        </svg>
+
+        <section class="reasons-section" aria-labelledby="reasons-title">
+          <div class="section-heading">
+            <p class="eyebrow">Little reasons</p>
+            <h2 id="reasons-title">A few reasons I adore you.</h2>
+          </div>
+
+          <div id="reasons-grid" class="reasons-grid"></div>
+        </section>
+
+        <section id="wish-section" class="wish-section" aria-labelledby="wish-title">
+          <div class="section-heading">
+            <p class="eyebrow">Postcards from the future</p>
+            <h2 id="wish-title">The Pond Post Office.</h2>
+            <p class="section-intro">
+              Write one small thing you hope we’ll do together. Fold it into a paper boat
+              and let the pond keep it afloat for a little while.
+            </p>
+          </div>
+
+          <div class="wish-card">
+            <form id="wish-form" class="wish-form">
+              <label class="wish-label" for="wish-input">A little hope for a future day</label>
+              <div class="wish-compose">
+                <input
+                  id="wish-input"
+                  name="wish"
+                  type="text"
+                  maxlength="120"
+                  autocomplete="off"
+                  placeholder="Maybe a slow walk somewhere lovely…"
+                  aria-describedby="wish-guidance wish-count"
+                  required
+                />
+                <button id="wish-submit" class="primary-button" type="submit">Fold into a boat</button>
+              </div>
+              <div class="wish-form-meta">
+                <p id="wish-guidance" class="wish-guidance">Just for this visit. Your note is not saved or sent anywhere.</p>
+                <p id="wish-count" class="wish-count" aria-live="polite">0 / 120</p>
+              </div>
+            </form>
+
+            <div class="wish-ideas" aria-label="Little ideas to get you started">
+              <span>A little idea:</span>
+              <button class="wish-suggestion" type="button" data-wish-suggestion="Find a new favorite café">Find a new favorite café</button>
+              <button class="wish-suggestion" type="button" data-wish-suggestion="Take the scenic way home">Take the scenic way home</button>
+              <button class="wish-suggestion" type="button" data-wish-suggestion="Make something delicious together">Make something delicious together</button>
+            </div>
+
+            <div class="wish-pond" role="group" aria-label="Your paper boats floating in the pond">
+              <svg class="wish-water-art" viewBox="0 0 900 270" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                <defs>
+                  <linearGradient id="wishWater" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0" stop-color="#B9DDD5" />
+                    <stop offset="1" stop-color="#83B8AD" />
+                  </linearGradient>
+                  <linearGradient id="wishBank" x1="0" x2="1" y1="0" y2="1">
+                    <stop offset="0" stop-color="#D8E4C7" />
+                    <stop offset="1" stop-color="#AFC8A7" />
+                  </linearGradient>
+                </defs>
+                <path d="M0 60c110 55 208 30 318 12 113-18 178 30 293 11 110-18 182-51 289-3v190H0z" fill="url(#wishBank)" />
+                <path d="M0 105c121-37 218 21 330 9 109-12 175-42 291-14 116 28 186 16 279-4v174H0z" fill="url(#wishWater)" />
+                <path d="M34 185c54-16 93-14 145 2m108 30c50-17 90-15 139 1m112-30c45-14 81-13 128 1m75 36c37-12 66-12 100 0" fill="none" stroke="#F8FFF4" stroke-width="3" stroke-linecap="round" opacity=".56" />
+                <path d="M95 126c27-9 48-8 73 1m470 49c31-11 55-10 82 1" fill="none" stroke="#FFF8F0" stroke-width="2" stroke-linecap="round" opacity=".44" />
+                <g fill="#FFF8F0" opacity=".8">
+                  <path d="M180 85c-10-14-27 1 0 21 27-20 10-35 0-21z" />
+                  <circle cx="730" cy="111" r="3" /><circle cx="760" cy="127" r="2" /><circle cx="146" cy="149" r="2.5" />
+                </g>
+                <g fill="#7E9F76">
+                  <path d="M30 119c4-25 1-44-7-61m7 50c-8-12-16-19-25-23m26 7c6-12 12-18 21-22" fill="none" stroke="#789A75" stroke-width="4" stroke-linecap="round" />
+                  <path d="M870 117c-4-24-2-41 7-59m-7 48c8-11 15-18 24-22m-25 6c-6-11-12-17-21-21" fill="none" stroke="#789A75" stroke-width="4" stroke-linecap="round" />
+                </g>
+              </svg>
+              <p id="wish-empty" class="wish-empty">The water is waiting for its first little boat.</p>
+              <div id="wish-boats" class="wish-boats"></div>
+            </div>
+            <p id="wish-note" class="wish-note" aria-live="polite" hidden></p>
+
+            <div class="wish-footer">
+              <p id="wish-status" class="wish-status" aria-live="polite">No boats yet — what shall we hope for?</p>
+              <button id="wish-clear" class="wish-clear" type="button" hidden>Let the boats drift away</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="message-section" class="message-section" aria-labelledby="message-title">
+          <div class="section-heading">
+            <p class="eyebrow">A note, from here to her</p>
+            <h2 id="message-title">Send a little love beyond the pond.</h2>
+            <p class="section-intro">
+              Write your own words here. We’ll dress them up as a note from Our Little Pond
+              and open them in WhatsApp, ready for you to review.
+            </p>
+          </div>
+
+          <div class="message-card">
+            <div class="message-card-heading">
+              <span class="message-envelope" aria-hidden="true">✉</span>
+              <div>
+                <p class="message-kicker">A little message for</p>
+                <h3>Hagar <span aria-hidden="true">♥</span></h3>
+              </div>
+              <span class="message-channel"><span aria-hidden="true">↗</span> WhatsApp draft</span>
+            </div>
+
+            <div class="message-layout">
+              <form id="message-form" class="message-compose">
+                <label for="message-input">Your words</label>
+                <textarea
+                  id="message-input"
+                  maxlength="500"
+                  rows="5"
+                  placeholder="Write something only you would say…"
+                  aria-describedby="message-guidance message-count"
+                  required
+                ></textarea>
+                <div class="message-compose-meta">
+                  <p id="message-guidance">This page won’t save or send your note.</p>
+                  <p id="message-count" aria-live="polite">0 / 500</p>
+                </div>
+                <div class="message-prompts" aria-label="Message starters">
+                  <button type="button" data-message-prompt="I was just thinking about you, and it made me smile.">Thinking of you</button>
+                  <button type="button" data-message-prompt="I hope your day has a little moment of peace and happiness in it.">A little wish</button>
+                  <button type="button" data-message-prompt="Just a tiny reminder: you are loved more than this little page can say.">A love note</button>
+                </div>
+                <a
+                  id="whatsapp-send"
+                  class="primary-button whatsapp-send"
+                  href="#message-input"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-disabled="true"
+                  tabindex="-1"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.4L3 20l.9-4.7a8.5 8.5 0 1 1 16.6-3.6Z" />
+                    <path d="M8.5 8.1c.2-.4.4-.4.7-.4h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2.1.4 0 .5l-.5.7c-.2.2-.3.3-.1.6a7.1 7.1 0 0 0 2.2 2c.3.2.5.2.6 0l.7-.8c.2-.2.3-.2.6-.1l1.6.8c.3.1.4.2.4.4 0 .2-.1 1.1-.8 1.6-.5.5-1.2.7-1.9.6-.7-.1-1.5-.4-2.5-.9a9.3 9.3 0 0 1-3.5-3.1c-.8-1.1-1.2-2.1-1.2-2.9 0-.7.4-1.4.7-1.9Z" />
+                  </svg>
+                  Open WhatsApp to send
+                </a>
+                <p class="message-send-note">WhatsApp opens with your note filled in and uses your signed-in account. Review it there and tap Send when you’re ready.</p>
+              </form>
+
+              <aside class="message-preview" aria-label="Preview of the message">
+                <div class="preview-chat-top">
+                  <span class="preview-avatar" aria-hidden="true">H</span>
+                  <span>Our Little Pond <span class="preview-chat-subtitle">a note for Hagar</span></span>
+                  <span class="preview-heart" aria-hidden="true">♥</span>
+                </div>
+                <div class="preview-chat-body">
+                  <span class="preview-chat-label">A message is taking shape…</span>
+                  <p id="message-preview-text" aria-live="polite">Your own words will appear here, tucked into a little note from the pond.</p>
+                  <span class="preview-chat-time" aria-hidden="true">just now <span>✓✓</span></span>
+                </div>
+                <div class="preview-chat-footer" aria-hidden="true">
+                  <span>Made with care</span><span>♡</span>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <section class="game-section" aria-labelledby="game-title">
+          <div class="section-heading">
+            <p class="eyebrow">A little duck game</p>
+            <h2 id="game-title">Help our duck find the happy little stars.</h2>
+          </div>
+
+          <div class="game-card">
+            <p id="game-instructions" class="game-instructions">
+              Move the duck with the arrow keys or WASD, or tap/click inside the pond. Collect five stars.
+            </p>
+            <div class="game-topbar">
+              <div class="game-score-wrap">
+                <span>Stars collected</span>
+                <strong id="game-score">0</strong>
+                <span>/</span>
+                <strong id="game-goal">5</strong>
+              </div>
+              <button id="game-start" class="primary-button game-button" type="button">
+                Start game
+              </button>
+              <button id="game-restart" class="secondary-button game-button" type="button">
+                Restart
+              </button>
+            </div>
+
+            <div
+              id="game-board"
+              class="game-board"
+              tabindex="0"
+              role="group"
+              aria-label="Duck collecting stars game"
+              aria-describedby="game-instructions"
+            >
+              <div id="duck-player" class="duck-player" aria-hidden="true">
+                <span class="duck-body"></span>
+                <span class="duck-head"></span>
+                <span class="duck-beak"></span>
+              </div>
+            </div>
+            <p id="game-message" class="game-message" aria-live="polite">
+              Help the duck gather stars and watch the pond glow a little brighter.
+            </p>
+          </div>
+        </section>
+
+        <section class="surprise-section" aria-labelledby="surprise-title">
+          <div class="section-heading">
+            <p class="eyebrow">Hidden surprises</p>
+            <h2 id="surprise-title">A little secret from the pond.</h2>
+          </div>
+
+          <div class="surprise-card">
+            <p id="hidden-pond-message" class="hidden-pond-message" aria-live="polite">
+              One of the ducks is quietly waiting for a second look.
+            </p>
+            <button id="reveal-secret" class="secondary-button" type="button">
+              Reveal the secret
+            </button>
+          </div>
+        </section>
+
+        <section class="final-letter-section" aria-labelledby="final-letter-title">
+          <div class="section-heading">
+            <p class="eyebrow">The final letter</p>
+            <h2 id="final-letter-title">For Hagar, with all my love.</h2>
+          </div>
+
+          <article class="letter-card">
+            <button id="reveal-letter" class="primary-button letter-button" type="button">
+              Open the final letter
+            </button>
+
+            <div id="final-letter-content" class="final-letter-content hidden" aria-live="polite">
+              <div class="letter-paper">
+                <p class="letter-salutation">My dear Hagar,</p>
+                <figure class="letter-photo">
+                  <img
+                    src="./assets/5958472297012203558_121.jpg"
+                    alt="Two people taking a selfie as one holds a small yellow flower."
+                    loading="lazy"
+                  />
+                  <figcaption>A little photo tucked into this letter.</figcaption>
+                </figure>
+                <div id="final-letter-body" class="final-letter-body"></div>
+                <p class="letter-signoff">With all my love,<br />Your silly duck</p>
+              </div>
+              <div class="floating-hearts" aria-hidden="true">
+                <span>❤</span>
+                <span>❤</span>
+                <span>❤</span>
+                <span>❤</span>
+                <span>❤</span>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>Made with love, a little code, and two very silly ducks.</p>
+        <p class="art-credit">
+          Dragonfly ornament: anonymous, 1909, public domain via
+          <a href="https://commons.wikimedia.org/wiki/File:Art_Nouveau_dragonfly_cache-blanc.svg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.
+        </p>
+      </footer>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

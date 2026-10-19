@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="water" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#A8D5D2"/>
+      <stop offset="1" stop-color="#AFC8A7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#FFF8F0"/>
+  <circle cx="1020" cy="120" r="72" fill="#F4D98B"/>
+  <path d="M0 440c190-90 350-25 540-55s390-95 660-20v265H0z" fill="url(#water)"/>
+  <ellipse cx="840" cy="460" rx="250" ry="85" fill="#9BC1BA" opacity=".6"/>
+  <g fill="#F4D98B" stroke="#493B37" stroke-width="8" stroke-linejoin="round">
+    <ellipse cx="700" cy="385" rx="110" ry="72"/>
+    <circle cx="785" cy="320" r="52"/>
+    <path d="m830 322 68 22-68 21z" fill="#D98C9A"/>
+  </g>
+  <g transform="translate(1940 0) scale(-1 1)" fill="#F4C8B8" stroke="#493B37" stroke-width="8" stroke-linejoin="round">
+    <ellipse cx="970" cy="408" rx="104" ry="68"/>
+    <circle cx="1040" cy="345" r="49"/>
+    <path d="m1080 347 62 20-62 20z" fill="#D98C9A"/>
+  </g>
+  <circle cx="800" cy="308" r="7" fill="#493B37"/>
+  <circle cx="890" cy="334" r="7" fill="#493B37"/>
+  <text x="90" y="210" fill="#493B37" font-family="Georgia, serif" font-size="72">Our Little Pond</text>
+  <text x="94" y="278" fill="#874653" font-family="Arial, sans-serif" font-size="30">A storybook made with love for Hagar</text>
+</svg>

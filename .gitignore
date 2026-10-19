@@ -1,0 +1,13 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+.idea/
+
+# Local caches
+*.log
+__pycache__/
+*.py[cod]
+.venv/

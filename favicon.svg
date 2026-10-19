@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Our Little Pond icon">
+  <defs>
+    <linearGradient id="pond" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#A8D5D2"/>
+      <stop offset="100%" stop-color="#AFC8A7"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="#FFF8F0"/>
+  <circle cx="42" cy="31" r="14" fill="#F4D98B"/>
+  <circle cx="84" cy="34" r="13" fill="#F4C8B8"/>
+  <ellipse cx="64" cy="76" rx="44" ry="18" fill="url(#pond)"/>
+  <ellipse cx="38" cy="74" rx="12" ry="9" fill="#F4D98B"/>
+  <ellipse cx="86" cy="72" rx="12" ry="9" fill="#F4C8B8"/>
+  <circle cx="36" cy="34" r="3" fill="#493B37"/>
+  <circle cx="80" cy="36" r="3" fill="#493B37"/>
+  <path d="M30 54 Q48 40 64 53" fill="none" stroke="#493B37" stroke-width="4" stroke-linecap="round"/>
+  <path d="M64 53 Q80 41 98 55" fill="none" stroke="#493B37" stroke-width="4" stroke-linecap="round"/>
+</svg>
