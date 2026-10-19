@@ -11,3 +11,6 @@ Thumbs.db
 __pycache__/
 *.py[cod]
 .venv/
+
+# IDE-generated sample script; the website is static HTML
+main.py

@@ -33,6 +33,8 @@ The WhatsApp recipient number is present in the client-side `app.js` so the clic
 
 ## GitHub Pages
 
+**Live website:** [https://islamalsohby-1.github.io/For_Hagar/](https://islamalsohby-1.github.io/For_Hagar/)
+
 This project is published in [`Islamalsohby-1/For_Hagar`](https://github.com/Islamalsohby-1/For_Hagar). To get a local copy, run:
 
 ```powershell
