@@ -56,4 +56,4 @@ The GitHub Pages URL uses a GitHub subdomain and is free. A custom `.com` domain
 - Romantic piano music is optional, loops at a gentle volume, and starts only after the user activates its control. The site remains usable if audio is unavailable.
 - Music credit: Frédéric Chopin, *Nocturne No. 2 in E-flat major, Op. 9*; piano performance by Peter Johnston. The recording is marked CC0 on Wikimedia Commons: [source and license](https://commons.wikimedia.org/wiki/File:Chopin_Nocturne_No._2_in_E_Flat_Major,_Op._9.ogg).
 - Dragonfly artwork: anonymous, from *Annuaire graphique* (1909), public domain; [Wikimedia Commons file and source](https://commons.wikimedia.org/wiki/File:Art_Nouveau_dragonfly_cache-blanc.svg).
-- No personal data is collected or uploaded.
+- The website does not collect or upload visitor data. The personal photos and WhatsApp recipient number listed above are included in this public repository and site.
